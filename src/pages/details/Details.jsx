@@ -3,7 +3,7 @@
 import {VscArrowLeft } from "react-icons/vsc";
 import { TodoContext } from '../../context/contextApi';
 
-const ProductDetails = () => {
+const Details = () => {
   const { productState, cartDispatch } = useContext(TodoContext);
   const { id } = useParams();  
   const navigate = useNavigate();
@@ -109,4 +109,4 @@ const ProductDetails = () => {
   );
 }
 
-export default ProductDetails;
+export default Details;
