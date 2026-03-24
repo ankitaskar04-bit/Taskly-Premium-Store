@@ -2,8 +2,8 @@
 import React, { useContext, useState } from 'react'
  import confetti from 'canvas-confetti';
 import { useNavigate } from 'react-router';
-import { TodoContext } from '../../context/contextApi';
- 
+import { TodoContext } from '../../context/Context';
+  
 const Payment = () => {
   const [success, setSuccess] = useState(false);
   const [confirm, setConfirm] = useState(false);

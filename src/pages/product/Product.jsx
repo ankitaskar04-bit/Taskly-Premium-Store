@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import { TodoContext } from "../../context/contextApi";
- import ProductCart from "./ProductCart";  
+  import ProductCart from "./ProductCart";  
+import { TodoContext } from "../../context/Context";
 const Product = () => {
   const { productState, search, loading, category } = useContext(TodoContext);
   const filteredData = productState.product.filter((p) => {

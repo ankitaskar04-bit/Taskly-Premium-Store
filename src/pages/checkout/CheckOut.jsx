@@ -1,8 +1,8 @@
  import React, { useContext } from "react";
  import CheckOutItems from "./CheckOutItems";
 import CheckOutAddress from "./checkOutAddress";
-import { TodoContext } from "../../context/contextApi";
-  
+import { TodoContext } from "../../context/Context";
+   
 const CheckOut = () => {
   const { cartState } = useContext(TodoContext);
 

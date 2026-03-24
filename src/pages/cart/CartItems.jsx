@@ -1,8 +1,8 @@
 import React, { useContext, useState } from "react";
 import { LuCirclePlus } from "react-icons/lu";
 import { AiTwotoneMinusCircle } from "react-icons/ai";
-import { TodoContext } from "../../context/contextApi";
-
+import { TodoContext } from "../../context/Context";
+ 
 const CartItems = ({ carts }) => {
   const { cartDispatch } = useContext(TodoContext);
   const [confirm, setConfirm] = useState(false);

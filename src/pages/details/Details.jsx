@@ -1,8 +1,8 @@
  import React, { useContext } from 'react';
  import { useParams, useNavigate } from 'react-router';
 import {VscArrowLeft } from "react-icons/vsc";
-import { TodoContext } from '../../context/contextApi';
-
+import { TodoContext } from '../../context/Context';
+ 
 const Details = () => {
   const { productState, cartDispatch } = useContext(TodoContext);
   const { id } = useParams();  

@@ -3,8 +3,8 @@ import { useNavigate } from "react-router";
 import { LoginSchema } from "../zod/LoginSchema";
 import { FaEyeSlash } from "react-icons/fa";
 import { FaEye } from "react-icons/fa";
-import { TodoContext } from "../context/contextApi";
-
+import { TodoContext } from "../context/Context";
+ 
 const Signup = () => {
   const { setLogout } = useContext(TodoContext)
   const [success, setSuccess] = useState(false);

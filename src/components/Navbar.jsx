@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import { useLocation, useNavigate } from "react-router";
 import Product from "../pages/product/Product";
-import { TodoContext } from "../context/contextApi";
-
+import { TodoContext } from "../context/Context";
+ 
 const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();

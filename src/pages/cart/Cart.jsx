@@ -2,8 +2,8 @@ import React, { useContext, useState } from "react";
 import CartItems from "./CartItems";
 import { useNavigate } from "react-router";
 import { FaArrowCircleLeft } from "react-icons/fa";
-import { TodoContext } from "../../context/contextApi";
-const Cart = () => {
+import { TodoContext } from "../../context/Context";
+ const Cart = () => {
   const { cartState } = useContext(TodoContext);
   const [success, setSuccess] = useState(false);
   const navigate = useNavigate();

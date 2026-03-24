@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
-import { TodoContext } from "../../context/contextApi";
-import { useNavigate } from "react-router";
+ import { useNavigate } from "react-router";
 import { VscCheck } from "react-icons/vsc";
+import { TodoContext } from "../../context/Context";
 
 
 
