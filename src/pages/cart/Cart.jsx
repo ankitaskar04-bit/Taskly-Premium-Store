@@ -90,7 +90,7 @@ import { TodoContext } from "../../context/Context";
                 ) : (
                   <tr>
                     <td colSpan="8" className="py-24 text-center text-gray-400">
-                      Cars are empty... 🛍️
+                      Carts are empty... 🛍️
                     </td>
                   </tr>
                 )}

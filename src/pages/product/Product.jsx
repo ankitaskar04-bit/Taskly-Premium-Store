@@ -27,7 +27,7 @@ const Product = () => {
             <tr className="text-gray-400 text-[10px] uppercase font-black tracking-[0.2em]">
               <th className="px-4 py-5 w-20 text-center">Preview</th>
               <th className="px-4 py-5 w-40 text-left">Product Title</th>
-              <th className="px-4 py-5 w-52 text-center text-left">Description</th>
+              <th className="px-4 py-5 w-52 text-center ">Description</th>
               <th className="px-4 py-5 w-32 text-center">Category</th>
               <th className="px-4 py-5 w-24 text-center">Price</th>
               <th className="px-4 py-5 w-24 text-center">Rating</th>
