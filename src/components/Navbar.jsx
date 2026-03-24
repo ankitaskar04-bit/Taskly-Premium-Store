@@ -2,16 +2,16 @@ import React, { useContext } from "react";
 import { useLocation, useNavigate } from "react-router";
 import Product from "../pages/product/Product";
 import { TodoContext } from "../context/Context";
- 
+
 const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const { cartState, logout, setLogout, search, setSearch, category, setCategory, productState } =
     useContext(TodoContext);
- 
+
   const categories = [
-    "All",...new Set(productState.product.map((p) => p.category)),
-];
+    "All", ...new Set(productState.product.map((p) => p.category)),
+  ];
 
 
   const totalItems = cartState.cart.reduce(
@@ -22,8 +22,8 @@ const Navbar = () => {
     if (location.pathname === '/') return <Product />;
   }
 
-  const user=JSON.parse(localStorage.getItem("login"));
- 
+  const user = JSON.parse(localStorage.getItem("login"));
+
   const handleCheckAuth = () => {
     const user = JSON.parse(localStorage.getItem("signup"));
     if (!user) {
@@ -86,14 +86,14 @@ const Navbar = () => {
                 </button>
 
                 <div
-                  onClick={() => {navigate("/cart")
-                    handleCheckAuth();
-                  }
-
-                  }
                   className="relative cursor-pointer p-2 hover:bg-white/5 rounded-full transition-all group"
                 >
-                  <span className="text-xl group-hover:scale-110 block transition">🛒</span>
+                  <span onClick={() => {
+                    navigate("/cart")
+                    handleCheckAuth();
+                  }
+                  }
+                    className="text-xl group-hover:scale-110 block transition">🛒</span>
                   {totalItems > 0 && (
                     <span className="absolute top-0 right-0 bg-green-500 text-[#0a191e] text-[10px] h-5 w-5 flex items-center justify-center rounded-full font-black shadow-[0_0_10px_rgba(34,197,94,0.5)]">
                       {totalItems}
@@ -106,7 +106,7 @@ const Navbar = () => {
                     <div className="relative flex items-center bg-white/5 border border-white/10 backdrop-blur-md h-11 px-4 rounded-l-xl border-r-0 transition-all group-hover:bg-white/10">
                       <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-500 font-black text-[10px] uppercase tracking-widest">
                         {user.displayName}
-                       </span>
+                      </span>
                       <div className="ml-2 w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse shadow-[0_0_8px_rgba(34,197,94,0.6)]"></div>
                     </div>
                     <button
